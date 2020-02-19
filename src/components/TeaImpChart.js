@@ -7,7 +7,7 @@ class TeaImpChart extends React.Component {
         this.state = {
             options: {
                 chart: {
-                    background: "lightgreen",
+                    background: "lightgray",
                     foreColor: "black"
                 },
                 xaxis: {
@@ -28,10 +28,16 @@ class TeaImpChart extends React.Component {
                         'France',
                         'China'
                     ]
+                },
+                fill: {
+                    colors: ['#113762']
+                },
+                title: {
+                    text: 'Countries with the greatest tea exports by USD spent'
                 }
             },
             series: [{
-                name: "USD worth of tea bought",
+                name: "USD in millions",
                 data: [
                     571.3,
                     497,
@@ -60,7 +66,8 @@ class TeaImpChart extends React.Component {
                     series={this.state.series}
                     type="bar"
                     height="500px"
-                    width="90%"
+                    width="96%"
+                    align="center"
                 />
             </div>
         )
